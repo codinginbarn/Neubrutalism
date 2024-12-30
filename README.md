@@ -11,6 +11,12 @@ Neubrutalism is a modern, minimalist CSS library that embraces bold design princ
 - Lightweight and easy to use
 - Consistent design language
 
+## 🫧 Usage
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/OshekharO/Neubrutalism@main/neubrutalism.css">
+```
+
 ## 📋 Todo
 
 - Add more components
