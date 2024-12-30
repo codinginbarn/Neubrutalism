@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neubrutalism CSS Library</title>
+  <link rel="stylesheet" href="neubrutalism.css" />
+  <script defer src="neubrutalism.js"></script>
+ </head>
+ <body>
+  <nav class="navbar">
+   <div class="navbar-container">
+    <a href="#" class="navbar-logo">Neubrutalism</a>
+    <button class="mobile-menu-button">☰</button>
+    <div class="navbar-menu">
+     <a href="#about" class="navbar-item">About</a>
+     <a href="#features" class="navbar-item">Features</a>
+     <a href="#platforms" class="navbar-item">Platforms</a>
+     <a href="#contribution" class="navbar-item">Contribute</a>
+    </div>
+   </div>
+  </nav>
+  <div class="nb-container">
+   <h1>Components</h1>
+
+   <!-- Dropdown -->
+   <section>
+    <h2>Dropdown</h2>
+    <div class="nb-dropdown nb-dropdown-primary">
+     <button class="nb-dropdown-toggle">Dropdown</button>
+     <div class="nb-dropdown-menu">
+      <a href="#" class="nb-dropdown-menu-item">Item 1</a>
+      <a href="#" class="nb-dropdown-menu-item">Item 2</a>
+     </div>
+    </div>
+   </section>
+
+   <!-- Marquee -->
+   <section>
+    <h2>Marquee</h2>
+    <div class="nb-marquee">
+     <div class="nb-marquee-content">This is a scrolling marquee text.</div>
+    </div>
+   </section>
+
+   <!-- Avatar -->
+   <section>
+    <h2>Avatar</h2>
+    <img class="nb-avatar" src="https://via.placeholder.com/100" alt="Avatar" />
+   </section>
+
+   <!-- Checkbox -->
+   <section>
+    <h2>Checkbox</h2>
+    <input type="checkbox" class="nb-checkbox" id="checkbox" />
+    <label for="checkbox">Check me</label>
+   </section>
+
+   <!-- Alert -->
+   <section>
+    <h2>Alert</h2>
+    <div class="nb-alert nb-alert-success">This is a success alert!</div>
+    <div class="nb-alert nb-alert-danger">This is a danger alert!</div>
+   </section>
+
+   <!-- Button -->
+   <section>
+    <h2>Buttons</h2>
+    <button class="nb-btn">Default Button</button>
+    <button class="nb-btn nb-btn-small">Small Button</button>
+    <button class="nb-btn nb-btn-large">Large Button</button>
+    <button class="nb-btn nb-btn-rounded">Rounded Button</button>
+    <button class="nb-btn nb-btn-disabled" disabled>Disabled Button</button>
+   </section>
+
+   <!-- Badge -->
+   <section>
+    <h2>Badge</h2>
+    <span class="nb-badge">Default Badge</span>
+    <span class="nb-badge nb-badge-primary">Primary Badge</span>
+    <span class="nb-badge nb-badge-success">Success Badge</span>
+    <span class="nb-badge nb-badge-danger">Danger Badge</span>
+    <span class="nb-badge nb-badge-pill">Pill Badge</span>
+   </section>
+
+   <!-- Cards -->
+   <section>
+    <h2>Cards</h2>
+    <div class="nb-card">
+     <div class="nb-card-header">Card Title</div>
+     <img src="https://via.placeholder.com/200" class="nb-card-image" alt="Card Image" />
+     <div class="nb-card-body">
+      <p>Card content goes here.</p>
+     </div>
+     <div class="nb-card-footer">
+      <button class="nb-btn">Action</button>
+     </div>
+    </div>
+   </section>
+   <!-- Accordion -->
+   <section>
+    <h2>Accordion</h2>
+    <div class="nb-accordion-item">
+     <div class="nb-accordion-header">Accordion Header</div>
+     <div class="nb-accordion-content">Accordion Content</div>
+    </div>
+    <div class="nb-accordion-item">
+     <div class="nb-accordion-header">Accordion Header 2</div>
+     <div class="nb-accordion-content">Accordion Content 2</div>
+    </div>
+   </section>
+
+   <!-- Toast -->
+   <section>
+    <h2>Toasts</h2>
+    <button class="nb-btn" onclick="createToast('This is a toast notification!')">Show Toast</button>
+   </section>
+
+   <!-- Navbar -->
+   <section>
+    <h2>Navbar</h2>
+    <nav class="nb-navbar">
+     <div>Logo</div>
+     <ul class="nb-nav">
+      <li class="nb-nav-item"><a href="#">Home</a></li>
+      <li class="nb-nav-item"><a href="#">About</a></li>
+      <li class="nb-nav-item"><a href="#">Contact</a></li>
+     </ul>
+    </nav>
+   </section>
+
+   <!-- Pagination -->
+   <section>
+    <h2>Pagination</h2>
+    <ul class="nb-pagination">
+     <li class="nb-page-item">1</li>
+     <li class="nb-page-item">2</li>
+     <li class="nb-page-item">3</li>
+    </ul>
+   </section>
+
+   <!-- Thumbnails -->
+   <section>
+    <h2>Thumbnails</h2>
+    <div class="nb-thumbnail">
+     <img src="https://via.placeholder.com/200" alt="Thumbnail" />
+    </div>
+   </section>
+
+   <!-- Form -->
+   <section>
+    <h2>Form</h2>
+    <form>
+     <input type="text" class="nb-form-control" placeholder="Your Name" />
+     <input type="email" class="nb-form-control" placeholder="Your Email" />
+     <button type="submit" class="nb-btn">Submit</button>
+    </form>
+   </section>
+
+   <!-- Carousel -->
+   <section>
+    <h2>Carousel</h2>
+    <div class="nb-carousel">
+     <div class="nb-carousel-inner">
+      <div class="nb-carousel-item">Slide 1</div>
+      <div class="nb-carousel-item">Slide 2</div>
+      <div class="nb-carousel-item">Slide 3</div>
+     </div>
+    </div>
+   </section>
+
+   <!-- Masonry-like Grid -->
+   <section>
+    <h2>Masonry-like Grid</h2>
+    <div class="nb-grid-masonry">
+     <div class="nb-grid-masonry-item">Item 1</div>
+     <div class="nb-grid-masonry-item">Item 2</div>
+     <div class="nb-grid-masonry-item">Item 3</div>
+     <div class="nb-grid-masonry-item">Item 4</div>
+     <div class="nb-grid-masonry-item">Item 5</div>
+    </div>
+   </section>
+
+   <!-- Bordered Grid -->
+   <section>
+    <h2>Bordered Grid</h2>
+    <div class="nb-grid-bordered nb-grid-3">
+     <div>Bordered Grid Item 1</div>
+     <div>Bordered Grid Item 2</div>
+     <div>Bordered Grid Item 3</div>
+    </div>
+   </section>
+
+   <!-- Footer -->
+   <section>
+    <h2>Footer</h2>
+    <footer class="nb-footer">
+     <p>© 2024 Neubrutalism CSS Library</p>
+    </footer>
+   </section>
+
+   <!-- Newsletter -->
+   <section>
+    <h2>Newsletter</h2>
+    <div class="nb-newsletter">
+     <input type="email" placeholder="Subscribe to our newsletter" />
+     <button class="nb-btn">Subscribe</button>
+    </div>
+   </section>
+
+   <!-- Testimonials -->
+   <section>
+    <h2>Testimonials</h2>
+    <div class="nb-testimonial">
+     <p>"This is a fantastic service!" - Customer Name</p>
+    </div>
+   </section>
+  </div>
+ </body>
+</html>
