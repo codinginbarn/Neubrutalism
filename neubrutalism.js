@@ -144,5 +144,4 @@ document.addEventListener("DOMContentLoaded", function () {
  // Expose global functions
 
  window.createToast = createToast;
- window.createDialog = createDialog;
 });
