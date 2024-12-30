@@ -33,7 +33,7 @@ body {
  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--primary-color);
 }
 
-/* New styles for navbar */
+/* New Navbar */
 .navbar {
  background-color: #4ecdc4;
  padding: 10px 0;
@@ -356,28 +356,135 @@ body {
  object-fit: cover;
 }
 
-/* Checkbox */
+/* Base Checkbox Styles */
 .nb-checkbox {
- appearance: none;
- width: 20px;
- height: 20px;
- border: var(--border-width) solid var(--primary-color);
- background-color: var(--secondary-color);
- cursor: pointer;
- position: relative;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    margin: 10px;
 }
 
-.nb-checkbox:checked {
- background-color: var(--primary-color);
+.nb-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
 }
 
-.nb-checkbox:checked::after {
- content: "✓";
- position: absolute;
- color: var(--secondary-color);
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
+.nb-checkbox-mark {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+    box-shadow: 3px 3px 0 var(--primary-color);
+    transition: all 0.2s ease;
+}
+
+.nb-checkbox input:checked ~ .nb-checkbox-mark {
+    background-color: var(--primary-color);
+}
+
+.nb-checkbox-mark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.nb-checkbox input:checked ~ .nb-checkbox-mark:after {
+    display: block;
+}
+
+.nb-checkbox .nb-checkbox-mark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--secondary-color);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Checkbox Variants */
+/* 1. Rounded Checkbox */
+.nb-checkbox-rounded .nb-checkbox-mark {
+    border-radius: 50%;
+}
+
+/* 2. Filled Checkbox */
+.nb-checkbox-filled .nb-checkbox-mark {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* 3. Outline Checkbox */
+.nb-checkbox-outline .nb-checkbox-mark {
+    background-color: transparent;
+    border-style: dashed;
+}
+
+.nb-checkbox-outline input:checked ~ .nb-checkbox-mark {
+    background-color: transparent;
+    border-style: solid;
+}
+
+/* 4. Switch Style Checkbox */
+.nb-checkbox-switch .nb-checkbox-mark {
+    width: 40px;
+    border-radius: 20px;
+    background-color: #e0e0e0;
+    position: relative;
+}
+
+.nb-checkbox-switch .nb-checkbox-mark:before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    top: 2px;
+    left: 2px;
+    transition: 0.3s;
+}
+
+.nb-checkbox-switch input:checked ~ .nb-checkbox-mark {
+    background-color: var(--primary-color);
+}
+
+.nb-checkbox-switch input:checked ~ .nb-checkbox-mark:before {
+    transform: translateX(20px);
+    background-color: var(--secondary-color);
+}
+
+/* 5. Color Variants */
+.nb-checkbox-primary input:checked ~ .nb-checkbox-mark {
+    background-color: var(--primary-color);
+}
+
+.nb-checkbox-success input:checked ~ .nb-checkbox-mark {
+    background-color: #2ecc71;
+}
+
+.nb-checkbox-danger input:checked ~ .nb-checkbox-mark {
+    background-color: #e74c3c;
+}
+
+.nb-checkbox-warning input:checked ~ .nb-checkbox-mark {
+    background-color: #f39c12;
+}
+
+/* 6. Disabled State */
+.nb-checkbox-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.nb-checkbox-disabled input {
+    pointer-events: none;
 }
 
 /* Alert */
@@ -551,7 +658,7 @@ body {
  align-items: center;
 }
 
-/* Carousel Improvements */
+/* Carousel */
 .nb-carousel {
  position: relative;
  width: 100%;
@@ -658,13 +765,13 @@ body {
  align-items: center;
 }
 
-.nb-text-center {
- text-align: center;
-}
+.nb-text-left { text-align: left; }
+.nb-text-center { text-align: center; }
+.nb-text-right { text-align: right; }
 
-.nb-text-right {
- text-align: right;
-}
+.nb-text-uppercase { text-transform: uppercase; }
+.nb-text-lowercase { text-transform: lowercase; }
+.nb-text-capitalize { text-transform: capitalize; }
 
 .nb-hidden {
  display: none;
