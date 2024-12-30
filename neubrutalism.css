@@ -727,8 +727,38 @@ body {
 
 /* Footer */
 .nb-footer {
- border-top: var(--border-width) solid var(--primary-color);
- padding: 20px;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+    box-shadow: 4px 4px 0 var(--primary-color);
+    padding: 40px 20px;
+    margin-top: 20px;
+}
+
+.nb-footer-simple {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nb-footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.nb-footer-social-icon {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 0 var(--primary-color);
+    transition: all 0.2s ease;
+}
+
+.nb-footer-social-icon:hover {
+    transform: translate(2px, 2px);
 }
 
 /* Newsletter */
