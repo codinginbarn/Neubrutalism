@@ -358,133 +358,133 @@ body {
 
 /* Base Checkbox Styles */
 .nb-checkbox {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    user-select: none;
-    margin: 10px;
+ position: relative;
+ display: inline-flex;
+ align-items: center;
+ cursor: pointer;
+ user-select: none;
+ margin: 10px;
 }
 
 .nb-checkbox input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+ position: absolute;
+ opacity: 0;
+ cursor: pointer;
+ height: 0;
+ width: 0;
 }
 
 .nb-checkbox-mark {
-    position: relative;
-    height: 20px;
-    width: 20px;
-    background-color: var(--secondary-color);
-    border: 2px solid var(--primary-color);
-    box-shadow: 3px 3px 0 var(--primary-color);
-    transition: all 0.2s ease;
+ position: relative;
+ height: 20px;
+ width: 20px;
+ background-color: var(--secondary-color);
+ border: 2px solid var(--primary-color);
+ box-shadow: 3px 3px 0 var(--primary-color);
+ transition: all 0.2s ease;
 }
 
 .nb-checkbox input:checked ~ .nb-checkbox-mark {
-    background-color: var(--primary-color);
+ background-color: var(--primary-color);
 }
 
 .nb-checkbox-mark:after {
-    content: "";
-    position: absolute;
-    display: none;
+ content: "";
+ position: absolute;
+ display: none;
 }
 
 .nb-checkbox input:checked ~ .nb-checkbox-mark:after {
-    display: block;
+ display: block;
 }
 
 .nb-checkbox .nb-checkbox-mark:after {
-    left: 6px;
-    top: 2px;
-    width: 5px;
-    height: 10px;
-    border: solid var(--secondary-color);
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
+ left: 6px;
+ top: 2px;
+ width: 5px;
+ height: 10px;
+ border: solid var(--secondary-color);
+ border-width: 0 2px 2px 0;
+ transform: rotate(45deg);
 }
 
 /* Checkbox Variants */
 /* 1. Rounded Checkbox */
 .nb-checkbox-rounded .nb-checkbox-mark {
-    border-radius: 50%;
+ border-radius: 50%;
 }
 
 /* 2. Filled Checkbox */
 .nb-checkbox-filled .nb-checkbox-mark {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+ background-color: var(--primary-color);
+ color: var(--secondary-color);
 }
 
 /* 3. Outline Checkbox */
 .nb-checkbox-outline .nb-checkbox-mark {
-    background-color: transparent;
-    border-style: dashed;
+ background-color: transparent;
+ border-style: dashed;
 }
 
 .nb-checkbox-outline input:checked ~ .nb-checkbox-mark {
-    background-color: transparent;
-    border-style: solid;
+ background-color: transparent;
+ border-style: solid;
 }
 
 /* 4. Switch Style Checkbox */
 .nb-checkbox-switch .nb-checkbox-mark {
-    width: 40px;
-    border-radius: 20px;
-    background-color: #e0e0e0;
-    position: relative;
+ width: 40px;
+ border-radius: 20px;
+ background-color: #e0e0e0;
+ position: relative;
 }
 
 .nb-checkbox-switch .nb-checkbox-mark:before {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    top: 2px;
-    left: 2px;
-    transition: 0.3s;
+ content: "";
+ position: absolute;
+ width: 16px;
+ height: 16px;
+ border-radius: 50%;
+ background-color: var(--primary-color);
+ top: 2px;
+ left: 2px;
+ transition: 0.3s;
 }
 
 .nb-checkbox-switch input:checked ~ .nb-checkbox-mark {
-    background-color: var(--primary-color);
+ background-color: var(--primary-color);
 }
 
 .nb-checkbox-switch input:checked ~ .nb-checkbox-mark:before {
-    transform: translateX(20px);
-    background-color: var(--secondary-color);
+ transform: translateX(20px);
+ background-color: var(--secondary-color);
 }
 
 /* 5. Color Variants */
 .nb-checkbox-primary input:checked ~ .nb-checkbox-mark {
-    background-color: var(--primary-color);
+ background-color: var(--primary-color);
 }
 
 .nb-checkbox-success input:checked ~ .nb-checkbox-mark {
-    background-color: #2ecc71;
+ background-color: #2ecc71;
 }
 
 .nb-checkbox-danger input:checked ~ .nb-checkbox-mark {
-    background-color: #e74c3c;
+ background-color: #e74c3c;
 }
 
 .nb-checkbox-warning input:checked ~ .nb-checkbox-mark {
-    background-color: #f39c12;
+ background-color: #f39c12;
 }
 
 /* 6. Disabled State */
 .nb-checkbox-disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+ opacity: 0.5;
+ cursor: not-allowed;
 }
 
 .nb-checkbox-disabled input {
-    pointer-events: none;
+ pointer-events: none;
 }
 
 /* Alert */
@@ -727,38 +727,38 @@ body {
 
 /* Footer */
 .nb-footer {
-    background-color: var(--secondary-color);
-    border: 2px solid var(--primary-color);
-    box-shadow: 4px 4px 0 var(--primary-color);
-    padding: 40px 20px;
-    margin-top: 20px;
+ background-color: var(--secondary-color);
+ border: 2px solid var(--primary-color);
+ box-shadow: 4px 4px 0 var(--primary-color);
+ padding: 40px 20px;
+ margin-top: 20px;
 }
 
 .nb-footer-simple {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
 }
 
 .nb-footer-social {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
+ display: flex;
+ gap: 15px;
+ margin-top: 20px;
 }
 
 .nb-footer-social-icon {
-    width: 40px;
-    height: 40px;
-    border: 2px solid var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 3px 3px 0 var(--primary-color);
-    transition: all 0.2s ease;
+ width: 40px;
+ height: 40px;
+ border: 2px solid var(--primary-color);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ box-shadow: 3px 3px 0 var(--primary-color);
+ transition: all 0.2s ease;
 }
 
 .nb-footer-social-icon:hover {
-    transform: translate(2px, 2px);
+ transform: translate(2px, 2px);
 }
 
 /* Newsletter */
@@ -805,4 +805,54 @@ body {
 
 .nb-hidden {
  display: none;
+}
+
+.nb-blockquote {
+ border-left: 4px solid var(--primary-color);
+ background-color: var(--secondary-color);
+ border: 2px solid var(--primary-color);
+ box-shadow: 4px 4px 0 var(--primary-color);
+ padding: 1rem 1rem 1rem 2rem;
+ margin: 1rem 0;
+ position: relative;
+}
+
+.nb-blockquote::before {
+ content: '"';
+ position: absolute;
+ left: 0.5rem;
+ top: 0;
+ font-size: 3rem;
+ color: var(--primary-color);
+ opacity: 0.2;
+}
+
+.nb-blockquote-author {
+ display: block;
+ margin-top: 0.5rem;
+ font-style: italic;
+ text-align: right;
+}
+
+.nb-code-block {
+ background-color: var(--secondary-color);
+ border: 2px solid var(--primary-color);
+ box-shadow: 4px 4px 0 var(--primary-color);
+ padding: 1rem;
+ margin: 1rem 0;
+ overflow-x: auto;
+}
+
+.nb-code-block code {
+ font-family: "Courier New", monospace;
+ color: var(--primary-color);
+ font-size: 0.9rem;
+ line-height: 1.6;
+}
+
+.nb-code-line-numbers {
+ display: inline-block;
+ margin-right: 1rem;
+ color: #888;
+ user-select: none;
 }
