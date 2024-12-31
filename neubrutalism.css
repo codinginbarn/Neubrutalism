@@ -214,8 +214,7 @@ body {
  border-bottom: var(--border-width) solid var(--primary-color);
 }
 
-/* Card Variants */
-.nb-card-hover:hover {
+.nb-card:hover {
  transform: translate(4px, 4px);
  box-shadow: 6px 6px 0 var(--primary-color);
 }
@@ -341,6 +340,11 @@ body {
  border: var(--border-width) solid var(--primary-color);
 }
 
+.nb-marquee:hover {
+ transform: translate(-5px, -5px);
+ box-shadow: 10px 10px 0px #000;
+}
+
 .nb-marquee-content {
  display: inline-block;
  padding: 10px;
@@ -364,6 +368,11 @@ body {
  border: var(--border-width) solid var(--primary-color);
  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--primary-color);
  object-fit: cover;
+}
+
+.nb-avatar:hover {
+ transform: translate(-5px, -5px);
+ box-shadow: 10px 10px 0px #000;
 }
 
 /* Base Checkbox Styles */
@@ -503,6 +512,11 @@ body {
  border: var(--border-width) solid var(--primary-color);
  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--primary-color);
  margin-bottom: 15px;
+}
+
+.nb-alert:hover {
+ transform: translate(-5px, -5px);
+ box-shadow: 10px 10px 0px #000;
 }
 
 .nb-alert-success {
@@ -735,6 +749,11 @@ body {
  margin-bottom: 15px;
 }
 
+.nb-thumbnail:hover {
+ transform: translate(-5px, -5px);
+ box-shadow: 10px 10px 0px #000;
+}
+
 /* Footer */
 .nb-footer {
  background-color: var(--secondary-color);
@@ -779,12 +798,22 @@ body {
  padding: 10px;
 }
 
+.nb-newsletter:hover {
+ transform: translate(-5px, -5px);
+ box-shadow: 10px 10px 0px #000;
+}
+
 /* Testimonials */
 .nb-testimonial {
  border: var(--border-width) solid var(--primary-color);
  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--primary-color);
  padding: 20px;
  margin-bottom: 15px;
+}
+
+.nb-testimonial:hover {
+ transform: translate(-5px, -5px);
+ box-shadow: 10px 10px 0px #000;
 }
 
 /* Neu Box - Stats */
@@ -819,7 +848,6 @@ body {
  word-break: break-word;
  font-size: 0.9rem;
 }
-
 
 /* Utility Classes */
 .nb-flex {
@@ -871,6 +899,11 @@ body {
  opacity: 0.2;
 }
 
+.nb-blockquote:hover {
+ transform: translate(-5px, -5px);
+ box-shadow: 10px 10px 0px #000;
+}
+
 .nb-blockquote-author {
  display: block;
  margin-top: 0.5rem;
@@ -885,6 +918,11 @@ body {
  padding: 1rem;
  margin: 1rem 0;
  overflow-x: auto;
+}
+
+.nb-code-block:hover {
+ transform: translate(-5px, -5px);
+ box-shadow: 10px 10px 0px #000;
 }
 
 .nb-code-block code {
