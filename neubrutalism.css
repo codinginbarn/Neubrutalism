@@ -116,6 +116,11 @@ body {
  padding: 8px;
  font-size: 0.8rem;
 }
+
+.nb-dropdown {
+ width: 100%;
+ max-width: none;
+}
 }
 
 /* Button */
@@ -282,10 +287,13 @@ body {
 .nb-dropdown {
  position: relative;
  display: inline-block;
+ width: 100%;
+ max-width: 250px;
 }
 
 .nb-dropdown-toggle {
  cursor: pointer;
+ width: 100%;
  padding: 10px 15px;
  border: var(--border-width) solid var(--primary-color);
  background-color: var(--secondary-color);
@@ -293,6 +301,7 @@ body {
  display: flex;
  align-items: center;
  justify-content: space-between;
+ transition: all 0.2s ease;
 }
 
 .nb-dropdown-toggle::after {
@@ -302,12 +311,14 @@ body {
 }
 
 .nb-dropdown-menu {
+ width: 100%;
+ box-sizing: border-box;
  display: none;
  position: absolute;
  background-color: var(--secondary-color);
  border: var(--border-width) solid var(--primary-color);
  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--primary-color);
- min-width: 160px;
+ min-width: 100%;
  z-index: 1;
 }
 
