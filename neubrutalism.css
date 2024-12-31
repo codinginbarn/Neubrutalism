@@ -860,6 +860,19 @@ body {
  font-size: 0.9rem;
 }
 
+/* List Group */
+ul {
+ list-style-type: none;
+ padding: 0;
+}
+
+ul li {
+ background-color: #4ecdc4;
+ margin-bottom: 10px;
+ padding: 10px;
+ border: 2px solid #000;
+}
+
 /* Utility Classes */
 .nb-flex {
  display: flex;
