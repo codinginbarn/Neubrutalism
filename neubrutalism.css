@@ -1043,13 +1043,6 @@ ul li {
 }
 
 .section {
- display: flex;
- flex-wrap: wrap;
- align-items: center;
- gap: 10px;
-}
-
-.section {
  display: grid;
  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
  gap: 10px;
