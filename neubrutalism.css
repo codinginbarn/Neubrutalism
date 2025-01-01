@@ -124,6 +124,28 @@ body {
 }
 
 /* Button */
+.nb-button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  border: 2px solid black;
+  border-radius: 7px;
+  padding: 0.3rem 0.5rem;
+  background-color: white;
+  box-shadow: 5px 5px 0px black;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.nb-button:hover {
+  box-shadow: 0 0 0 black;
+  transform: translateY(3px) translateX(3px);
+}
 
 .nb-btn {
  padding: 10px 15px;
@@ -1012,4 +1034,23 @@ ul li {
  margin-right: 1rem;
  color: #888;
  user-select: none;
+}
+
+.icon {
+ width: 24px;
+ height: 24px;
+ transition: all 0.3s ease-in-out;
+}
+
+.section {
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+ gap: 10px;
+}
+
+.section {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+ gap: 10px;
 }
