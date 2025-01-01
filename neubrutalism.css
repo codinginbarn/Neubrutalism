@@ -897,6 +897,33 @@ ul li {
  border: 2px solid #000;
 }
 
+/* GitHub Corner */
+.github-corner:hover .octo-arm {
+ animation: octocat-wave 0.56s ease-in-out;
+ }
+ @media (max-width: 500px) {
+ .github-corner:hover .octo-arm {
+  animation: none;
+ }
+ .github-corner .octo-arm {
+  animation: octocat-wave 0.56s ease-in-out;
+ }
+}
+@keyframes octocat-wave {
+ 0%,
+ to {
+  transform: rotate(0);
+ }
+ 20%,
+ 60% {
+  transform: rotate(-25deg);
+ }
+ 40%,
+ 80% {
+  transform: rotate(10deg);
+ }
+}
+
 /* Utility Classes */
 .nb-flex {
  display: flex;
