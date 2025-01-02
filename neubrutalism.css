@@ -822,21 +822,63 @@ body {
 
 /* Pagination */
 .nb-pagination {
- display: flex;
- list-style: none;
- margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
 }
 
 .nb-page-item {
- border: var(--border-width) solid var(--primary-color);
- padding: 10px;
- margin: 0 5px;
- cursor: pointer;
- transition: background-color 0.2s;
+  border: 2px solid black;
+  background-color: white;
+  box-shadow: 3px 3px 0 black;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
 }
 
 .nb-page-item:hover {
- background-color: #f1f1f1;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 black;
+}
+
+.nb-page-item.active {
+  background-color: black;
+  color: white;
+}
+
+.nb-page-prev,
+.nb-page-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.nb-page-prev svg,
+.nb-page-next svg {
+  width: 24px;
+  height: 24px;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .nb-pagination {
+        gap: 5px;
+    }
+    
+    .nb-page-item {
+        padding: 6px 10px;
+        min-width: 30px;
+        height: 30px;
+    }
 }
 
 /* Thumbnails */
