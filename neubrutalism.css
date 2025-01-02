@@ -319,7 +319,8 @@ body {
 .nb-toast {
  position: fixed;
  bottom: 20px;
- right: 20px;
+ right: 10px;
+ left: 10px;
  background-color: var(--secondary-color);
  border: var(--border-width) solid var(--primary-color);
  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--primary-color);
@@ -337,6 +338,7 @@ body {
 
 .nb-toast-close {
  background: none;
+ color: black;
  border: none;
  font-size: 20px;
  cursor: pointer;
