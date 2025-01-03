@@ -1361,3 +1361,7 @@ pre {
 font-family: 'Courier New', Courier, monospace;
 display: inline;
 }
+
+.section-gap {
+ margin-bottom: 10px;
+}
