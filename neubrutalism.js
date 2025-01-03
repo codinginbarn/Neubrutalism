@@ -53,63 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
   return toast;
  }
 
- // Carousel Functionality
-
- class NeuCarousel {
-  constructor(carouselElement) {
-   this.carousel = carouselElement;
-   this.inner = this.carousel.querySelector(".nb-carousel-inner");
-   this.items = this.inner.querySelectorAll(".nb-carousel-item");
-   this.currentIndex = 0;
-   this.init();
-  }
-
-  init() {
-   // Create navigation buttons
-
-   this.prevBtn = document.createElement("button");
-   this.prevBtn.classList.add("nb-carousel-btn", "nb-carousel-prev");
-   this.prevBtn.textContent = "←";
-   this.prevBtn.addEventListener("click", () => this.prev());
-   this.nextBtn = document.createElement("button");
-   this.nextBtn.classList.add("nb-carousel-btn", "nb-carousel-next");
-   this.nextBtn.textContent = "→";
-   this.nextBtn.addEventListener("click", () => this.next());
-   this.carousel.appendChild(this.prevBtn);
-   this.carousel.appendChild(this.nextBtn);
-  }
-
-  next() {
-   this.currentIndex++;
-
-   if (this.currentIndex >= this.items.length) {
-    this.currentIndex = 0;
-   }
-
-   this.updateCarousel();
-  }
-
-  prev() {
-   this.currentIndex--;
-
-   if (this.currentIndex < 0) {
-    this.currentIndex = this.items.length - 1;
-   }
-
-   this.updateCarousel();
-  }
-
-  updateCarousel() {
-   const offset = -this.currentIndex * 100;
-   this.inner.style.transform = `translateX(${offset}%)`;
-  }
- }
-
- // Initialize Carousels
-
- const carousels = document.querySelectorAll(".nb-carousel");
- carousels.forEach((carousel) => new NeuCarousel(carousel));
-
  // Function to copy HTML content to clipboard
     function copyComponentHTML(event) {
         // Find the closest section or the clicked element
