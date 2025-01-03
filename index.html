@@ -421,11 +421,22 @@
    <!-- Form -->
    <section class="section-gap">
     <h2>Form</h2>
-    <form>
-     <input type="text" class="nb-form-control" placeholder="Your Name" />
-     <input type="email" class="nb-form-control" placeholder="Your Email" />
-     <button type="submit" class="nb-btn">Submit</button>
-    </form>
+    <div class="nb-pre-form">
+     <form class="nb-form">
+      <div class="nb-form-group">
+       <input type="text" placeholder="Name" required class="nb-form-input" />
+      </div>
+      <div class="nb-form-group">
+       <input type="email" placeholder="Email" required class="nb-form-input" name="Email" />
+      </div>
+      <div class="nb-form-group">
+       <input type="tel" placeholder="Phone" class="nb-form-input" name="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+      </div>
+      <button type="submit" class="nb-form-btn">
+       Sign Up
+      </button>
+     </form>
+    </div>
    </section>
 
    <!-- Carousel -->
