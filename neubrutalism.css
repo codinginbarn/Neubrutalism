@@ -370,6 +370,15 @@ body {
     }
 }
 
+.nb-accordion-outline .nb-accordion-item {
+    border-style: dashed;
+}
+
+.nb-accordion-primary .nb-accordion-header:checked {
+    background-color: #007bff;
+    color: white;
+}
+
 /* Toast */
 .nb-toast {
  position: fixed;
