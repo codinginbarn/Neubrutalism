@@ -288,34 +288,86 @@ body {
 }
 
 /* Accordion */
+.nb-accordion {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .nb-accordion-item {
- border: var(--border-width) solid var(--primary-color);
- margin-bottom: 10px;
- box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--primary-color);
+    margin-bottom: 10px;
+    border: 2px solid black;
+    box-shadow: 4px 4px 0 black;
+}
+
+.nb-accordion-state {
+    display: none;
 }
 
 .nb-accordion-header {
- padding: 15px;
- cursor: pointer;
- display: flex;
- justify-content: space-between;
- align-items: center;
- background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.nb-accordion-header::after {
- content: "+";
- font-weight: bold;
+.nb-accordion-header:hover {
+    background-color: #f1f1f1;
 }
 
-.nb-accordion-item.active .nb-accordion-header::after {
- content: "−";
+.nb-accordion-icon {
+    transition: transform 0.3s ease;
 }
 
 .nb-accordion-content {
- display: none;
- padding: 15px;
- border-top: var(--border-width) solid var(--primary-color);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0 15px;
+    background-color: white;
+    transition: 
+        max-height 0.3s ease,
+        opacity 0.3s ease,
+        padding 0.3s ease;
+}
+
+/* Checked State */
+.nb-accordion-state:checked + .nb-accordion-header {
+    background-color: black;
+    color: white;
+}
+
+.nb-accordion-state:checked + .nb-accordion-header .nb-accordion-icon {
+    transform: rotate(45deg);
+}
+
+.nb-accordion-state:checked ~ .nb-accordion-content {
+    max-height: 1000px; /* Adjust based on content */
+    opacity: 1;
+    padding: 15px;
+}
+
+/* Content Styling */
+.nb-accordion-content p,
+.nb-accordion-content ul,
+.nb-accordion-content ol {
+    margin: 0;
+}
+
+.nb-accordion-content ul,
+.nb-accordion-content ol {
+    padding-left: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .nb-accordion-header {
+        padding: 10px;
+    }
 }
 
 /* Toast */
