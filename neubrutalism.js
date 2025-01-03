@@ -1,35 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
- // Accordion Functionality
-
- const accordionHeaders = document.querySelectorAll(".nb-accordion-header");
- accordionHeaders.forEach((header) => {
-  header.addEventListener("click", function () {
-   const accordionItem = this.closest(".nb-accordion-item");
-   const accordionContent = accordionItem.querySelector(".nb-accordion-content");
-
-   // Toggle active class
-
-   accordionItem.classList.toggle("active");
-
-   // Slide toggle content
-
-   if (accordionContent.style.display === "block") {
-    accordionContent.style.display = "none";
-   } else {
-    accordionContent.style.display = "block";
-   }
-
-   // Close other accordion items
-
-   const otherItems = document.querySelectorAll(".nb-accordion-item:not(.active)");
-   otherItems.forEach((item) => {
-    const content = item.querySelector(".nb-accordion-content");
-    item.classList.remove("active");
-    content.style.display = "none";
-   });
-  });
- });
-
  // Mobile menu toggle
  const mobileMenuButton = document.querySelector(".mobile-menu-button");
  const navbarMenu = document.querySelector(".navbar-menu");
