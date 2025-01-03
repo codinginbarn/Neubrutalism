@@ -869,6 +869,16 @@ body {
  }
 }
 
+.nb-navbar-dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.nb-navbar-transparent {
+  background-color: transparent;
+  border-color: transparent;
+}
+ 
 /* Grid System */
 .nb-grid {
  display: grid;
